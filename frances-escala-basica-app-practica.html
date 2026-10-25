@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>Francés Escala Básica · Cursos 26-27</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#eef1f5;
+  --card:#ffffff;
+  --ink:#161c24;
+  --ink-soft:#5d6a7a;
+  --line:#d3dae3;
+  --line-strong:#b3bfcd;
+  --navy:#1b3a5c;
+  --ok:#1a6b4a;
+  --ok-bg:#e2f2ea;
+  --bad:#a52019;
+  --bad-bg:#fbe6e4;
+  --warn:#8a5a09;
+  --warn-bg:#fbf0d8;
+  --s1:#9b2c2c;
+  --s2:#6a4a91;
+  --s3:#1a6579;
+  --focus:#1b3a5c;
+  --shadow:0 1px 0 var(--line), 0 6px 18px rgba(22,28,36,.06);
+}
+:root:not([data-theme="light"]){ color-scheme:light }
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0f141a; --card:#171e26; --ink:#e7ecf2; --ink-soft:#97a5b6;
+    --line:#2a343f; --line-strong:#3b4854; --navy:#8fb6dd;
+    --ok:#6ed3a5; --ok-bg:#12352a; --bad:#ff9a92; --bad-bg:#3a1a19;
+    --warn:#e9c477; --warn-bg:#392e13;
+    --s1:#e08c8c; --s2:#b8a0dd; --s3:#78c2d6; --focus:#8fb6dd;
+    --shadow:0 1px 0 var(--line), 0 6px 18px rgba(0,0,0,.35);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0f141a; --card:#171e26; --ink:#e7ecf2; --ink-soft:#97a5b6;
+  --line:#2a343f; --line-strong:#3b4854; --navy:#8fb6dd;
+  --ok:#6ed3a5; --ok-bg:#12352a; --bad:#ff9a92; --bad-bg:#3a1a19;
+  --warn:#e9c477; --warn-bg:#392e13;
+  --s1:#e08c8c; --s2:#b8a0dd; --s3:#78c2d6; --focus:#8fb6dd;
+  --shadow:0 1px 0 var(--line), 0 6px 18px rgba(0,0,0,.35);
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:"Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  font-size:16px; line-height:1.5; -webkit-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:820px; margin:0 auto; padding:20px 16px 72px}
+
+/* ---------- cabecera ---------- */
+header.top{
+  display:flex; align-items:flex-start; justify-content:space-between; gap:16px;
+  padding-bottom:14px; border-bottom:2px solid var(--ink);
+}
+h1{
+  font-size:1.32rem; font-weight:700; letter-spacing:-.015em; margin:0;
+}
+.sub{margin:4px 0 0; color:var(--ink-soft); font-size:.86rem}
+.iconbtn{
+  background:transparent; border:1px solid var(--line-strong); color:var(--ink-soft);
+  border-radius:8px; width:36px; height:36px; cursor:pointer; font-size:1rem; flex:none;
+}
+.iconbtn:hover{color:var(--ink); border-color:var(--ink-soft)}
+
+/* ---------- navegación ---------- */
+nav.tabs{display:flex; gap:2px; margin-top:0}
+nav.tabs button{
+  flex:1; background:transparent; border:0; border-bottom:3px solid transparent;
+  padding:12px 6px; font:inherit; font-weight:600; font-size:.92rem;
+  color:var(--ink-soft); cursor:pointer;
+}
+nav.tabs button[aria-selected="true"]{color:var(--ink); border-bottom-color:var(--ink)}
+nav.tabs button:hover{color:var(--ink)}
+.count-pill{
+  display:inline-block; margin-left:6px; min-width:20px; padding:1px 6px;
+  border-radius:999px; background:var(--bad-bg); color:var(--bad);
+  font-size:.72rem; font-weight:700; vertical-align:1px;
+}
+
+.sitbar{display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 20px}
+.sitbar button{
+  background:var(--card); border:1px solid var(--line); border-left:4px solid var(--line-strong);
+  border-radius:4px; padding:8px 12px; font:inherit; font-size:.85rem; font-weight:500;
+  color:var(--ink-soft); cursor:pointer; text-align:left;
+}
+.sitbar button:hover{border-color:var(--line-strong); color:var(--ink)}
+.sitbar button[aria-pressed="true"]{color:var(--ink); font-weight:600; border-color:var(--line-strong); box-shadow:var(--shadow)}
+.sitbar button[data-sit="1"]{border-left-color:var(--s1)}
+.sitbar button[data-sit="2"]{border-left-color:var(--s2)}
+.sitbar button[data-sit="3"]{border-left-color:var(--s3)}
+.sitbar button[data-sit="4"]{border-left-color:#c27c0e}
+.sitbar button[data-sit="5"]{border-left-color:#2f8f5b}
+.sitbar button[data-sit="6"]{border-left-color:#c0398a}
+.sitbar button[data-sit="7"]{border-left-color:#3b6fc4}
+.sitbar button[data-sit="8"]{border-left-color:#7a8899}
+.sitbar button[data-sit="9"]{border-left-color:#b5651d}
+.sitbar button[data-sit="10"]{border-left-color:#1f8a8a}
+.sitbar button[data-sit="11"]{border-left-color:#a83f3f}
+.sitbar button[data-sit="12"]{border-left-color:#5b6bbf}
+.sitbar .n{display:block; font-size:.72rem; color:var(--ink-soft); font-weight:500}
+
+/* ---------- panel de práctica ---------- */
+.panel{
+  background:var(--card); border:1px solid var(--line); border-radius:10px;
+  box-shadow:var(--shadow); padding:22px;
+}
+.meter{display:flex; align-items:center; gap:12px; font-size:.78rem; color:var(--ink-soft)}
+.meter .bar{flex:1; height:4px; background:var(--line); border-radius:99px; overflow:hidden}
+.meter .bar i{display:block; height:100%; background:var(--ink); transition:width .25s ease}
+
+.prompt{
+  font-size:1.34rem; line-height:1.32; font-weight:600; letter-spacing:-.01em;
+  margin:18px 0 4px; max-width:34ch;
+}
+.prompt-tag{font-size:.75rem; color:var(--ink-soft); font-weight:500}
+
+textarea#answer{
+  width:100%; margin-top:16px; padding:13px 14px; resize:vertical; min-height:74px;
+  font-family:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-size:1rem; line-height:1.5; color:var(--ink);
+  background:var(--paper); border:1px solid var(--line-strong); border-radius:8px;
+}
+textarea#answer:focus-visible, button:focus-visible, input:focus-visible{
+  outline:2px solid var(--focus); outline-offset:2px;
+}
+.row{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; align-items:center}
+.btn{
+  background:var(--card); color:var(--ink); border:1px solid var(--line-strong);
+  border-radius:8px; padding:9px 14px; font:inherit; font-size:.88rem; font-weight:500; cursor:pointer;
+}
+.btn:hover{border-color:var(--ink-soft)}
+.btn.primary{background:var(--ink); color:var(--card); border-color:var(--ink); font-weight:600}
+.btn.primary:hover{opacity:.88}
+.btn.ghost{border-color:transparent; color:var(--ink-soft); padding-left:8px; padding-right:8px}
+.btn.ghost:hover{color:var(--ink)}
+.btn[disabled]{opacity:.45; cursor:default}
+.modes{display:inline-flex; border:1px solid var(--line-strong); border-radius:8px; overflow:hidden}
+.modes .mode{
+  background:transparent; color:var(--ink-soft); border:0; border-left:1px solid var(--line-strong);
+  padding:9px 12px; font:inherit; font-size:.82rem; font-weight:500; cursor:pointer;
+}
+.modes .mode:first-child{border-left:0}
+.modes .mode:hover{color:var(--ink)}
+.modes .mode[aria-pressed="true"]{background:var(--ink); color:var(--card); font-weight:600}
+.modes .mode[disabled]{opacity:.4; cursor:default}
+
+.exmode{display:inline-flex; border:1px solid var(--line-strong); border-radius:8px; overflow:hidden; margin-bottom:16px}
+.exmode .ex{
+  background:transparent; color:var(--ink-soft); border:0; border-left:1px solid var(--line-strong);
+  padding:9px 13px; font:inherit; font-size:.85rem; font-weight:500; cursor:pointer;
+}
+.exmode .ex:first-child{border-left:0}
+.exmode .ex:hover{color:var(--ink)}
+.exmode .ex[aria-pressed="true"]{background:var(--ink); color:var(--card); font-weight:600}
+
+.order-hint{font-size:.82rem; color:var(--ink-soft); margin:0 0 12px}
+.zone{
+  display:flex; flex-wrap:wrap; gap:8px; padding:12px; border-radius:8px; min-height:52px;
+}
+.zone.target{background:var(--paper); border:2px dashed var(--line-strong); margin-bottom:14px}
+.zone.target.filled{border-style:solid; border-color:var(--line)}
+.zone.pool{background:transparent; border:1px solid transparent; padding:0}
+.chip{
+  background:var(--card); border:1px solid var(--line-strong); border-radius:7px;
+  padding:8px 12px; font-family:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-size:.95rem; cursor:grab; user-select:none; -webkit-user-select:none; -webkit-touch-callout:none; -webkit-tap-highlight-color:transparent; touch-action:manipulation;
+}
+.chip:hover{border-color:var(--ink-soft)}
+.chip:active{cursor:grabbing}
+.chip.placed{background:var(--paper)}
+.chip.dragging{opacity:.4}
+.chip.ok{border-color:var(--ok); color:var(--ok); background:var(--ok-bg)}
+.chip.bad{border-color:var(--bad); color:var(--bad); background:var(--bad-bg)}
+
+.gap-sentence{font-size:1.15rem; font-weight:500; line-height:1.7}
+.gap-input{
+  font-family:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-size:1rem; padding:2px 4px; border:0; border-bottom:2px solid var(--ink-soft);
+  background:transparent; color:var(--ink); text-align:center; border-radius:0;
+}
+.gap-input:focus-visible{outline:2px solid var(--focus); outline-offset:2px}
+.gap-answer{font-weight:700; border-bottom:2px solid var(--ink-soft)}
+.gap-answer.ok{color:var(--ok); border-bottom-color:var(--ok)}
+.gap-answer.bad{color:var(--bad); border-bottom-color:var(--bad)}
+.spacer{flex:1}
+
+/* ---------- corrección ---------- */
+.verdict{
+  margin-top:18px; border-radius:8px; padding:14px 16px; border:1px solid var(--line);
+}
+.verdict.ok{background:var(--ok-bg); border-color:transparent}
+.verdict.ko{background:var(--bad-bg); border-color:transparent}
+.verdict.rev{background:var(--warn-bg); border-color:transparent}
+.verdict h3{margin:0 0 10px; font-size:.86rem; font-weight:700}
+.verdict.ok h3{color:var(--ok)} .verdict.ko h3{color:var(--bad)} .verdict.rev h3{color:var(--warn)}
+.diff{
+  font-family:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-size:.95rem; line-height:1.85; word-spacing:.1em;
+}
+.diff .w-ok{color:var(--ok)}
+.diff .w-extra{color:var(--bad); text-decoration:line-through; text-decoration-thickness:1.5px}
+.diff .w-miss{color:var(--bad); border-bottom:2px solid var(--bad)}
+.diff .w-typo{color:var(--warn); border-bottom:2px dotted var(--warn)}
+.solution{margin-top:12px; padding-top:12px; border-top:1px solid var(--line-strong)}
+.solution .lab{font-size:.74rem; color:var(--ink-soft); display:block; margin-bottom:3px}
+.solution .en{
+  font-family:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-size:1rem; font-weight:500;
+}
+.legend{margin-top:12px; font-size:.75rem; color:var(--ink-soft)}
+.legend span{margin-right:12px; white-space:nowrap}
+
+/* ---------- fichero / fallidas ---------- */
+ul.cards{list-style:none; margin:0; padding:0; display:grid; gap:10px}
+ul.cards li{
+  background:var(--card); border:1px solid var(--line); border-left:4px solid var(--line-strong);
+  border-radius:8px; padding:13px 15px; display:flex; gap:12px; align-items:flex-start;
+}
+li[data-sit="1"]{border-left-color:var(--s1)}
+li[data-sit="2"]{border-left-color:var(--s2)}
+li[data-sit="3"]{border-left-color:var(--s3)}
+li[data-sit="4"]{border-left-color:#c27c0e}
+li[data-sit="5"]{border-left-color:#2f8f5b}
+li[data-sit="6"]{border-left-color:#c0398a}
+li[data-sit="7"]{border-left-color:#3b6fc4}
+li[data-sit="8"]{border-left-color:#7a8899}
+li[data-sit="9"]{border-left-color:#b5651d}
+li[data-sit="10"]{border-left-color:#1f8a8a}
+li[data-sit="11"]{border-left-color:#a83f3f}
+li[data-sit="12"]{border-left-color:#5b6bbf}
+.card-body{flex:1; min-width:0}
+.card-en{
+  font-family:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-size:.95rem; font-weight:500;
+}
+.card-es{color:var(--ink-soft); font-size:.87rem; margin-top:3px}
+.card-meta{margin-top:7px; font-size:.74rem; color:var(--ink-soft); display:flex; gap:10px; flex-wrap:wrap}
+.tally-ok{color:var(--ok); font-weight:600}
+.tally-ko{color:var(--bad); font-weight:600}
+.speak{
+  flex:none; background:transparent; border:1px solid var(--line-strong); color:var(--ink-soft);
+  border-radius:7px; width:34px; height:34px; cursor:pointer; font-size:.95rem;
+}
+.speak:hover{color:var(--ink); border-color:var(--ink-soft)}
+.sec-head{
+  display:flex; align-items:baseline; gap:10px; margin:22px 0 10px;
+  padding-bottom:6px; border-bottom:1px solid var(--line-strong);
+}
+.sec-head h2{margin:0; font-size:.95rem; font-weight:700}
+.sec-head .c{font-size:.78rem; color:var(--ink-soft)}
+.empty{
+  background:var(--card); border:1px dashed var(--line-strong); border-radius:10px;
+  padding:30px 22px; text-align:center; color:var(--ink-soft); font-size:.9rem;
+}
+.empty strong{display:block; color:var(--ink); font-size:1rem; margin-bottom:6px}
+.toolbar{display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:16px}
+.toolbar label{font-size:.82rem; color:var(--ink-soft); display:flex; align-items:center; gap:6px; cursor:pointer}
+footer{margin-top:34px; font-size:.75rem; color:var(--ink-soft); text-align:center}
+.hidden{display:none !important}
+@media (max-width:560px){
+  .wrap{padding:16px 12px 60px}
+  .prompt{font-size:1.15rem}
+  .sitbar{display:grid; grid-template-columns:1fr 1fr}
+  nav.tabs button{font-size:.84rem; padding:11px 2px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none !important; animation:none !important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div>
+      <h1>Francés Escala Básica · Cursos 26-27</h1>
+      <p class="sub">66 frases en 7 situaciones</p>
+    </div>
+    <button class="iconbtn" id="themeBtn" title="Cambiar tema" aria-label="Cambiar tema">◐</button>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" id="tab-practicar" aria-selected="true" data-tab="practicar">Practicar</button>
+    <button role="tab" id="tab-fichero" aria-selected="false" data-tab="fichero">Fichero</button>
+    <button role="tab" id="tab-fallidas" aria-selected="false" data-tab="fallidas">Fallidas<span class="count-pill hidden" id="failPill">0</span></button>
+  </nav>
+
+  <div class="sitbar" id="sitbar"></div>
+
+  <!-- PRACTICAR -->
+  <section id="view-practicar">
+    <div class="panel">
+      <div class="meter">
+        <span id="pos">Frase 1 de 15</span>
+        <span class="bar"><i id="bar" style="width:0%"></i></span>
+        <span id="score">0 aciertos</span>
+      </div>
+
+      <div class="exmode" id="exmode" role="group" aria-label="Tipo de ejercicio">
+        <button class="ex" data-ex="escribir" aria-pressed="true">✍️ Escribir</button>
+        <button class="ex" data-ex="ordenar" aria-pressed="false">🔀 Ordenar palabras</button>
+        <button class="ex" data-ex="rellenar" aria-pressed="false">🕳️ Rellenar hueco</button>
+      </div>
+
+      <p class="prompt-tag" id="promptTag">Traduce al francés</p>
+      <p class="prompt" id="prompt">—</p>
+
+      <textarea id="answer" rows="2" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" enterkeyhint="send"
+        placeholder="Escribe la frase en francés y pulsa Intro"></textarea>
+
+      <div id="orderGame" class="hidden">
+        <p class="order-hint">Toca las palabras en orden (o arrástralas) para formar la frase</p>
+        <div class="zone target" id="orderTarget"></div>
+        <div class="zone pool" id="orderPool"></div>
+      </div>
+
+      <div id="gapGame" class="hidden">
+        <p class="order-hint">Escribe las palabras que faltan; Intro pasa al siguiente hueco</p>
+        <p class="prompt gap-sentence" id="gapSentence"></p>
+      </div>
+
+      <div class="row">
+        <button class="btn primary" id="checkBtn">Comprobar</button>
+        <button class="btn" id="revealBtn">Ver respuesta</button>
+        <button class="btn" id="hearBtn" title="Escuchar en francés">🔊 Escuchar</button>
+        <span class="spacer"></span>
+        <div class="modes" id="modes" role="group" aria-label="Modo de práctica">
+          <button class="mode" data-mode="seq" aria-pressed="true">Secuencial</button>
+          <button class="mode" data-mode="rnd" aria-pressed="false">Aleatorias</button>
+          <button class="mode" data-mode="fail" aria-pressed="false">Solo fallidas</button>
+        </div>
+      </div>
+
+      <div id="verdict"></div>
+    </div>
+
+    <div id="practiceEmpty" class="empty hidden"></div>
+
+    <p class="legend" id="legend">
+      <span style="color:var(--ok)">■ correcta</span>
+      <span style="color:var(--warn)">■ errata leve</span>
+      <span style="color:var(--bad)">■ sobra o falta</span>
+    </p>
+  </section>
+
+  <!-- FICHERO -->
+  <section id="view-fichero" class="hidden">
+    <div class="toolbar">
+      <button class="btn" id="resetBtn">Reiniciar estadísticas</button>
+    </div>
+    <div id="ficheroList"></div>
+  </section>
+
+  <!-- FALLIDAS -->
+  <section id="view-fallidas" class="hidden">
+    <div class="toolbar" id="failToolbar"></div>
+    <div id="fallidasList"></div>
+  </section>
+
+  <footer>Los datos se guardan solo en este navegador.</footer>
+</div>
+
+<script>
+"use strict";
+
+/* ============ 1. CONTENIDO ============ */
+const SITUACIONES = [{"id": 1, "titulo": "Situación 1.1", "tema": "Identificación", "frases": [["Quelle est votre date de naissance ? / Quel est votre lieu de naissance ?", "¿Cuál es su fecha de nacimiento? / ¿Cuál es su lugar de nacimiento?"], ["Quelle est votre nationalité ?", "¿Cuál es su nacionalidad?"], ["Quel est votre numéro de téléphone ?", "¿Cuál es su número de teléfono?"], ["Puis-je voir votre passeport ? CNI ? Permis de conduire ?", "¿Puedo ver su pasaporte? ¿DNI? ¿Permiso de conducir?"], ["Veuillez me présenter votre carte de séjour ?", "¿Puede enseñarme su permiso de residencia?"], ["Quelle est votre adresse en Espagne ?", "¿Cuál es su dirección en España?"], ["Ce sont seulement des mesures de sécurité policières. C'est la procédure habituelle.", "(Son) sólo medidas de seguridad policiales. Es el procedimiento habitual."], ["Pouvez-vous l'épeler / l'écrire ?", "¿Puede deletrearlo / escribirlo?"]]}, {"id": 2, "titulo": "Situación 1.2", "tema": "Situación asistencial", "frases": [["Monsieur ça va ? Êtes-vous blessé ?", "Señor, ¿está bien?, ¿está herido?"], ["Je suis blessé. Je saigne.", "Estoy herido. Estoy sangrando."], ["Je fais un infarctus / Je ne peux pas respirer", "Me está dando un infarto / Yo no puedo respirar"], ["Je crois que mon bras est cassé / Je crois que ma jambe est cassée", "Creo que tengo el brazo roto / la pierna rota"], ["Quelqu'un m'a poignardé / Quelqu'un m'a tiré dessus dans la poitrine", "Alguien me apuñaló / disparó en el pecho"], ["Essayez de rester calme, j'appelle une ambulance", "Intente mantener la calma, pediré una ambulancia"], ["Prenez-vous des médicaments ?", "¿Toma alguna medicación?"], ["Voulez-vous qu'on appelle quelqu'un ?", "¿Quiere que llamemos a alguien?"]]}, {"id": 3, "titulo": "Situación 2", "tema": "Sustracción de efectos personales", "frases": [["On m'a volé mon portefeuille", "Me han robado la cartera"], ["On m'a volé toutes mes affaires", "Me han robado todas mis pertenencias"], ["On m'a volé", "Me han atracado."], ["Que s'est-il passé ?", "¿Cómo sucedió?"], ["Avez-vous vu l'auteur ? Pouvez-vous me donner son signalement ?", "¿Vio al autor? ¿Puede describirle?"], ["Quel âge avait-il ?", "¿Cuántos años tenía?"], ["Était-il grand ou petit ?", "¿Era alto o bajo?"], ["Vous devez aller au commissariat pour porter plainte", "Tiene que ir a comisaría a denunciar un delito."], ["Je veux déposer une plainte", "Quiero interponer una denuncia."], ["Je veux déposer une réclamation", "Quiero poner una queja"]]}, {"id": 4, "titulo": "Situación 3", "tema": "Detención", "frases": [["Halte police ! Ne bougez plus !", "¡Policía! ¡Alto! ¡No se mueva! / ¡Quieto!"], ["Vous êtes en état d'arrestation.", "Está usted detenido."], ["Lâchez le couteau / le pistolet / l'arme", "Suelte el cuchillo / la pistola / el arma."], ["Contre le mur / Face au mur !", "¡Contra la pared! / ¡De cara a la pared!"], ["Sortez les mains des poches !", "¡Saque las manos de los bolsillos!"], ["Montrez-moi vos mains !", "¡Déjeme ver sus manos!"], ["Mettez les mains contre le mur !", "¡Ponga las manos contra la pared!"], ["Écartez les bras / les jambes ! Encore plus !", "¡Separe los brazos, separe las piernas! ¡Aún más!"], ["Mettez les mains dans le dos !", "¡Ponga las manos a la espalda!"], ["Reculez vos pieds !", "¡Eche los pies hacia atrás!"], ["Je vais vous faire une palpation de sécurité.", "Voy a cachearle."], ["Je vais vous menotter.", "Voy a engrilletarle."], ["Montez dans la voiture / Sortez de la voiture", "Métase en el coche / Salga del coche"], ["Arrête de résister ! Fais ce que je te dis !", "¡Deja de resistirte! ¡Haz lo que te digo!"]]}, {"id": 5, "titulo": "Situación 4.1", "tema": "ODAC", "frases": [["Vous êtes en garde à vue pour homicide / braquage…", "Está detenido por un delito de homicidio / atraco"], ["Voici votre avocat commis d'office.", "Este es su abogado de oficio."], ["Voici vos droits.", "Estos son sus derechos."], ["Comprenez-vous vos droits ?", "¿Entiende sus derechos?"], ["Allez-vous signer la notification de vos droits ?", "¿Va a firmar la información de sus derechos?"], ["Avez-vous besoin de voir un médecin ?", "¿Necesita ir al médico?"], ["Voulez-vous prévenir quelqu'un de votre arrestation ?", "¿Quiere informar a alguien de su detención?"], ["Avez-vous été placé en garde à vue auparavant ?", "¿Ha estado detenido anteriormente?"], ["Je vais vous prendre vos empreintes digitales.", "Voy a tomarle las huellas dactilares (reseñarle)"]]}, {"id": 6, "titulo": "Situación 4.2", "tema": "ACUDE", "frases": [["Videz vos poches.", "Vacíe sus bolsillos"], ["Mettez vos affaires sur la table.", "Ponga todas sus pertenencias sobre la mesa"], ["Mettez tout dans ce sac.", "Ponga todo en esta bolsa"], ["Enlevez votre ceinture et vos lacets.", "Quítese el cinturón y los cordones de los zapatos"], ["Prenez une couverture et entrez dans la geôle", "Coja una manta y entre en el calabozo"], ["Ce n'est pas autorisé : utiliser son portable / fumer", "No está permitido: usar tu teléfono móvil / fumar"]]}, {"id": 7, "titulo": "Situación 5", "tema": "Evacuación", "frases": [["Ici la police ! C'est une urgence", "¡Les habla la Policía! Hay una emergencia."], ["Sortez de l'immeuble / l'hôtel / du stade / l'aéroport", "Salgan del edificio / hotel / estadio / aeropuerto"], ["Il y a un incendie dans l'immeuble / Une alerte à la bombe dans l'hôtel", "Hay un incendio en el edificio / una amenaza de bomba en el hotel."], ["Sortez de votre chambre immédiatement.", "Salga de su habitación de inmediato"], ["Tout le monde dehors, suivez nos instructions.", "Todo el mundo fuera de aquí, sigan nuestras instrucciones"], ["Ne prenez rien. Laissez vos affaires.", "No coja nada. Deje sus pertenencias"], ["Je ne peux pas sortir de ma chambre.", "No puedo salir de mi habitación"], ["Tout le monde derrière le cordon policier.", "Todo el mundo detrás del cordón policial"], ["Évacuez (la zone) rapidement, par ici !", "Despejen (la zona) rápidamente, ¡por aquí!"], ["Descendez les escaliers, ne prenez pas l'ascenseur.", "Bajen las escaleras, no usen el ascensor"], ["Restez tranquille, pas de panique.", "Mantenga la calma, no se ponga nervioso"]]}];
+
+/* Índice plano con identificador estable: s1-01, s2-03… */
+const FRASES = [];
+SITUACIONES.forEach(s => s.frases.forEach((f, i) => {
+  FRASES.push({
+    id: "s" + s.id + "-" + String(i + 1).padStart(2, "0"),
+    sit: s.id, en: f[0], es: f[1]
+  });
+}));
+
+/* ============ 2. ALMACENAMIENTO ============ */
+const KEY = "app-frances-escala-basica-cursos-26-27-v1";
+let store = { stats: {}, tema: null };
+
+function load() {
+  try {
+    const raw = localStorage.getItem(KEY);
+    if (raw) {
+      const p = JSON.parse(raw);
+      if (p && typeof p === "object") {
+        store.stats = (p.stats && typeof p.stats === "object") ? p.stats : {};
+        store.tema = p.tema || null;
+      }
+    }
+  } catch (e) { store = { stats: {}, tema: null }; }
+}
+function save() {
+  try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {}
+}
+function stat(id) {
+  if (!store.stats[id]) store.stats[id] = { ok: 0, ko: 0, last: null };
+  return store.stats[id];
+}
+load();
+
+/* ============ 3. COMPARACIÓN DE TEXTO ============ */
+function limpia(s) {
+  return s.toLowerCase()
+    .replace(/[\u2018\u2019\u02bc`´]/g, "'")
+    .replace(/[\u201c\u201d]/g, '"')
+    .replace(/[.,;:!?¡¿"()\[\]…\/]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+function palabras(s) {
+  const c = limpia(s);
+  return c ? c.split(" ") : [];
+}
+function lev(a, b) {
+  if (a === b) return 0;
+  const m = a.length, n = b.length;
+  if (!m) return n; if (!n) return m;
+  let prev = Array.from({ length: n + 1 }, (_, j) => j);
+  for (let i = 1; i <= m; i++) {
+    const cur = [i];
+    for (let j = 1; j <= n; j++) {
+      cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    }
+    prev = cur;
+  }
+  return prev[n];
+}
+function esErrata(a, b) {
+  const d = lev(a, b);
+  if (d === 0) return true;
+  const len = Math.max(a.length, b.length);
+  if (len <= 3) return false;
+  return len <= 6 ? d === 1 : d <= 2;
+}
+
+/* Alineación por subsecuencia común máxima y marcado por palabra */
+function comparar(userTxt, refTxt) {
+  const A = palabras(userTxt);         // lo escrito
+  const B = palabras(refTxt);          // la solución
+  const m = A.length, n = B.length;
+  const dp = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0));
+  for (let i = m - 1; i >= 0; i--)
+    for (let j = n - 1; j >= 0; j--)
+      dp[i][j] = A[i] === B[j] ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+
+  const ops = [];
+  let i = 0, j = 0;
+  while (i < m && j < n) {
+    if (A[i] === B[j]) { ops.push({ t: "ok", w: B[j] }); i++; j++; }
+    else if (dp[i + 1][j] >= dp[i][j + 1]) { ops.push({ t: "extra", w: A[i] }); i++; }
+    else { ops.push({ t: "miss", w: B[j] }); j++; }
+  }
+  while (i < m) { ops.push({ t: "extra", w: A[i++] }); }
+  while (j < n) { ops.push({ t: "miss", w: B[j++] }); }
+
+  // extra + miss contiguos y parecidos = errata de escritura
+  const out = [];
+  for (let k = 0; k < ops.length; k++) {
+    const a = ops[k], b = ops[k + 1];
+    if (a && b && ((a.t === "extra" && b.t === "miss") || (a.t === "miss" && b.t === "extra"))) {
+      const esc = a.t === "extra" ? a.w : b.w;
+      const sol = a.t === "miss" ? a.w : b.w;
+      if (esErrata(esc, sol)) { out.push({ t: "typo", w: esc, sol: sol }); k++; continue; }
+    }
+    out.push(a);
+  }
+  const exacta = out.every(o => o.t === "ok");
+  const soloErratas = !exacta && out.every(o => o.t === "ok" || o.t === "typo");
+  return { ops: out, exacta, soloErratas };
+}
+
+/* ============ 4. VOZ ============ */
+let voz = null;
+function eligeVoz() {
+  if (!("speechSynthesis" in window)) return;
+  const vs = speechSynthesis.getVoices();
+  voz = vs.find(v => v.lang === "fr-FR") || vs.find(v => /^fr-/.test(v.lang)) || null;
+}
+if ("speechSynthesis" in window) {
+  eligeVoz();
+  speechSynthesis.onvoiceschanged = eligeVoz;
+}
+function decir(texto) {
+  if (!("speechSynthesis" in window)) return;
+  try {
+    if (!voz) eligeVoz();
+    const u = new SpeechSynthesisUtterance(texto);
+    u.lang = "fr-FR"; u.rate = 0.92;
+    if (voz) u.voice = voz;
+    if (speechSynthesis.speaking || speechSynthesis.pending) {
+      speechSynthesis.cancel();
+      setTimeout(() => { try { speechSynthesis.resume(); speechSynthesis.speak(u); } catch (e) {} }, 150);
+    } else {
+      speechSynthesis.resume();
+      speechSynthesis.speak(u);
+    }
+  } catch (e) {}
+}
+
+/* ============ 5. ESTADO DE LA INTERFAZ ============ */
+let tab = "practicar";
+let sit = 1;                 // 1, 2, 3
+let mazo = [];               // ids en orden
+let idx = 0;
+let corregida = false;
+let modo = "seq";            // seq | rnd | fail
+let ejercicio = "escribir";  // escribir | ordenar | rellenar
+let ordenFraseId = null;
+let ordenPool = [];          // {idx, tok}
+let ordenPlaced = [];
+let gapFraseId = null, gapIdxs = [], gapToks = [], gapPartes = {};
+
+const $ = s => document.querySelector(s);
+const esc = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+function frasesDe(s) { return FRASES.filter(f => f.sit === s); }
+function fallidasDe(s) { return frasesDe(s).filter(f => stat(f.id).last === "ko"); }
+function totalFallidas() { return FRASES.filter(f => stat(f.id).last === "ko").length; }
+
+/* ---- barra de situaciones ---- */
+function pintaSitbar() {
+  $("#sitbar").innerHTML = SITUACIONES.map(s => {
+    const total = s.frases.length;
+    const extra = tab === "fallidas" ? fallidasDe(s.id).length + " fallidas"
+                : tab === "fichero" ? total + " frases"
+                : total + " frases";
+    return `<button data-sit="${s.id}" aria-pressed="${s.id === sit}">
+      ${s.titulo}: ${esc(s.tema)}<span class="n">${extra}</span></button>`;
+  }).join("");
+  $("#sitbar").querySelectorAll("button").forEach(b => {
+    b.addEventListener("click", () => {
+      sit = Number(b.dataset.sit);
+      nuevoMazo();
+      render();
+    });
+  });
+}
+
+/* ---- mazo de práctica ---- */
+function nuevoMazo() {
+  const base = modo === "fail" ? fallidasDe(sit) : frasesDe(sit);
+  mazo = base.map(f => f.id);
+  if (modo === "rnd") for (let i = mazo.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [mazo[i], mazo[j]] = [mazo[j], mazo[i]];
+  }
+  idx = 0; corregida = false;
+}
+function actual() { return FRASES.find(f => f.id === mazo[idx]) || null; }
+
+/* ---- vista Practicar ---- */
+function tokenize(s) {
+  const out = [];
+  s.split(/\s+/).filter(Boolean).forEach(t => {
+    if (out.length && /^[?!:;…]+$/.test(t)) out[out.length - 1] += " " + t;
+    else out.push(t);
+  });
+  return out;
+}
+
+function generarPuzzleSiNuevo(f) {
+  if (ordenFraseId === f.id) return;
+  ordenFraseId = f.id;
+  const toks = tokenize(f.en).map((t, i) => ({ idx: i, tok: t }));
+  ordenPlaced = [];
+  ordenPool = toks.slice();
+  if (ordenPool.length > 1) {
+    let intentos = 0;
+    do {
+      for (let i = ordenPool.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [ordenPool[i], ordenPool[j]] = [ordenPool[j], ordenPool[i]];
+      }
+      intentos++;
+    } while (intentos < 5 && ordenPool.every((p, i) => p.idx === i));
+  }
+}
+
+let dragIdx = null, dragSrc = null;
+const PUEDE_ARRASTRAR = !!(window.matchMedia && matchMedia("(hover:hover) and (pointer:fine)").matches);
+if (!PUEDE_ARRASTRAR) {
+  const h = document.querySelector("#orderGame .order-hint");
+  if (h) h.textContent = "Toca las palabras en orden para formar la frase. Toca una ya colocada para quitarla.";
+}
+function pintaOrden(mostrarCorreccion) {
+  const target = $("#orderTarget"), pool = $("#orderPool");
+  target.classList.toggle("filled", ordenPlaced.length > 0);
+  const ref = mostrarCorreccion ? tokenize(actual().en) : [];
+  target.innerHTML = ordenPlaced.map((p, i) => {
+    let cls = "chip placed";
+    if (mostrarCorreccion) cls += (p.tok === ref[i] ? " ok" : " bad");
+    return `<span class="${cls}" draggable="${PUEDE_ARRASTRAR && !mostrarCorreccion}" data-src="placed" data-idx="${p.idx}">${esc(p.tok)}</span>`;
+  }).join("");
+  pool.innerHTML = mostrarCorreccion ? "" : ordenPool.map(p =>
+    `<span class="chip" draggable="${PUEDE_ARRASTRAR}" data-src="pool" data-idx="${p.idx}">${esc(p.tok)}</span>`
+  ).join("");
+  if (!mostrarCorreccion) enlazaOrden();
+}
+function moverIdx(idx, destino) {
+  if (corregida) return;
+  if (destino === "placed") {
+    const i = ordenPool.findIndex(p => p.idx === idx); if (i < 0) return;
+    ordenPlaced.push(ordenPool.splice(i, 1)[0]);
+  } else {
+    const i = ordenPlaced.findIndex(p => p.idx === idx); if (i < 0) return;
+    ordenPool.push(ordenPlaced.splice(i, 1)[0]);
+  }
+  pintaOrden(false);
+}
+function enlazaOrden() {
+  document.querySelectorAll("#orderGame .chip").forEach(el => {
+    el.addEventListener("click", () => moverIdx(Number(el.dataset.idx), el.dataset.src === "pool" ? "placed" : "pool"));
+    el.addEventListener("dragstart", () => { dragIdx = Number(el.dataset.idx); dragSrc = el.dataset.src; el.classList.add("dragging"); });
+    el.addEventListener("dragend", () => el.classList.remove("dragging"));
+  });
+  const target = $("#orderTarget"), pool = $("#orderPool");
+  target.ondragover = e => e.preventDefault();
+  target.ondrop = e => {
+    e.preventDefault();
+    if (dragIdx === null || corregida) return;
+    const toks = tokenize(actual().en);
+    if (dragSrc === "pool") { const i = ordenPool.findIndex(p => p.idx === dragIdx); if (i >= 0) ordenPool.splice(i, 1); }
+    else { const i = ordenPlaced.findIndex(p => p.idx === dragIdx); if (i >= 0) ordenPlaced.splice(i, 1); }
+    const after = [...target.querySelectorAll(".chip:not(.dragging)")]
+      .find(el => e.clientX < el.getBoundingClientRect().left + el.getBoundingClientRect().width / 2);
+    const item = { idx: dragIdx, tok: toks[dragIdx] };
+    if (after) {
+      const insertAt = ordenPlaced.findIndex(p => p.idx === Number(after.dataset.idx));
+      ordenPlaced.splice(insertAt < 0 ? ordenPlaced.length : insertAt, 0, item);
+    } else ordenPlaced.push(item);
+    dragIdx = null; dragSrc = null;
+    pintaOrden(false);
+  };
+  pool.ondragover = e => e.preventDefault();
+  pool.ondrop = e => {
+    e.preventDefault();
+    if (dragIdx === null || corregida) return;
+    const toks = tokenize(actual().en);
+    if (dragSrc === "placed") { const i = ordenPlaced.findIndex(p => p.idx === dragIdx); if (i >= 0) ordenPlaced.splice(i, 1); }
+    else { const i = ordenPool.findIndex(p => p.idx === dragIdx); if (i >= 0) ordenPool.splice(i, 1); }
+    ordenPool.push({ idx: dragIdx, tok: toks[dragIdx] });
+    dragIdx = null; dragSrc = null;
+    pintaOrden(false);
+  };
+}
+
+function corrigeOrden(revelada) {
+  const f = actual(); if (!f || corregida) return;
+  const st = stat(f.id);
+  let clase, titulo;
+  if (revelada) {
+    ordenPlaced = tokenize(f.en).map((t, i) => ({ idx: i, tok: t }));
+    ordenPool = [];
+    clase = "rev"; titulo = "Respuesta mostrada";
+    st.ko++; st.last = "ko";
+  } else {
+    if (ordenPool.length > 0) return; // faltan palabras por colocar
+    const refToks = tokenize(f.en);
+    const correcta = ordenPlaced.length === refToks.length && ordenPlaced.every((p, i) => p.tok === refToks[i]);
+    if (correcta) { clase = "ok"; titulo = "Correcta"; st.ok++; st.last = "ok"; }
+    else { clase = "ko"; titulo = "Revisa el orden"; st.ko++; st.last = "ko"; }
+  }
+  save();
+  corregida = true;
+  pintaOrden(true);
+  $("#verdict").innerHTML =
+    '<div class="verdict ' + clase + '"><h3>' + titulo + '</h3>' +
+    '<div class="solution"><span class="lab">Frase correcta</span><span class="en">' + esc(f.en) + '</span></div></div>';
+  $("#checkBtn").textContent = "Siguiente frase";
+  $("#revealBtn").disabled = true;
+  decir(f.en);
+  actualizaPill();
+  $("#checkBtn").focus();
+}
+
+function partesToken(t) {
+  const m = t.match(/^([^A-Za-zÀ-ÖØ-öø-ÿ']*)([A-Za-zÀ-ÖØ-öø-ÿ'-]+)([^A-Za-zÀ-ÖØ-öø-ÿ']*)$/);
+  return m ? { lead: m[1], core: m[2], trail: m[3] } : null;
+}
+function generarGapSiNuevo(f) {
+  if (gapFraseId === f.id) return;
+  gapFraseId = f.id;
+  gapToks = tokenize(f.en);
+  const candidatos = gapToks
+    .map((t, i) => ({ i, p: partesToken(t) }))
+    .filter(x => x.p && x.p.core.length >= 3);
+  const n = gapToks.length;
+  const objetivo = n <= 5 ? 1 : n <= 9 ? 2 : 3;
+  const numHuecos = Math.min(objetivo, Math.max(1, candidatos.length));
+  const barajados = candidatos.slice();
+  for (let i = barajados.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [barajados[i], barajados[j]] = [barajados[j], barajados[i]];
+  }
+  const elegidos = barajados.length ? barajados.slice(0, numHuecos)
+    : [{ i: 0, p: partesToken(gapToks[0]) || { lead: "", core: gapToks[0], trail: "" } }];
+  gapIdxs = elegidos.map(e => e.i).sort((a, b) => a - b);
+  gapPartes = {};
+  elegidos.forEach(e => { gapPartes[e.i] = e.p; });
+}
+function pintaGap(mostrarCorreccion, resultados) {
+  const resMap = {};
+  (resultados || []).forEach(r => { resMap[r.idx] = r.ok; });
+  const html = gapToks.map((t, i) => {
+    const p = gapPartes[i];
+    if (!p) return esc(t);
+    if (mostrarCorreccion) {
+      const cls = resultados ? "gap-answer " + (resMap[i] ? "ok" : "bad") : "gap-answer";
+      return esc(p.lead) + '<span class="' + cls + '">' + esc(p.core) + '</span>' + esc(p.trail);
+    }
+    const ancho = Math.max(3, p.core.length + 2);
+    return esc(p.lead) + '<input type="text" id="gapInput-' + i + '" class="gap-input" autocomplete="off" autocapitalize="off" autocorrect="off" enterkeyhint="next" spellcheck="false" style="width:' + ancho + 'ch">' + esc(p.trail);
+  }).join(" ");
+  $("#gapSentence").innerHTML = html;
+  if (!mostrarCorreccion) {
+    const inputs = gapIdxs.map(i => document.getElementById("gapInput-" + i));
+    inputs.forEach((inp, k) => {
+      inp.addEventListener("keydown", e => {
+        if (e.key !== "Enter") return;
+        e.preventDefault();
+        if (k < inputs.length - 1) inputs[k + 1].focus(); else corrigeGap(false);
+      });
+    });
+    if (inputs[0]) inputs[0].focus();
+  }
+}
+function corrigeGap(revelada) {
+  const f = actual(); if (!f || corregida) return;
+  const st = stat(f.id);
+  let clase, titulo, resultados;
+  if (revelada) {
+    clase = "rev"; titulo = "Respuesta mostrada";
+    st.ko++; st.last = "ko";
+  } else {
+    resultados = [];
+    let todasOk = true, todasExactas = true;
+    gapIdxs.forEach(idx => {
+      const inp = document.getElementById("gapInput-" + idx);
+      const val = inp ? inp.value.trim() : "";
+      const a = limpia(val), b = limpia(gapPartes[idx].core);
+      const exacta = !!val && a === b;
+      const okTypo = !!val && esErrata(a, b);
+      resultados.push({ idx, ok: exacta || okTypo });
+      if (!exacta) todasExactas = false;
+      if (!(exacta || okTypo)) todasOk = false;
+    });
+    if (todasOk) {
+      clase = todasExactas ? "ok" : "rev";
+      titulo = todasExactas ? "Correcta" : "Bien, con alguna errata de escritura";
+      st.ok++; st.last = "ok";
+    } else { clase = "ko"; titulo = "Revisa las palabras marcadas"; st.ko++; st.last = "ko"; }
+  }
+  save();
+  corregida = true;
+  pintaGap(true, resultados);
+  $("#verdict").innerHTML =
+    '<div class="verdict ' + clase + '"><h3>' + titulo + '</h3>' +
+    '<div class="solution"><span class="lab">Frase completa</span><span class="en">' + esc(f.en) + '</span></div></div>';
+  $("#checkBtn").textContent = "Siguiente frase";
+  $("#revealBtn").disabled = true;
+  decir(f.en);
+  actualizaPill();
+  $("#checkBtn").focus();
+}
+
+function pintaExmode() {
+  document.querySelectorAll("#exmode .ex").forEach(b =>
+    b.setAttribute("aria-pressed", String(b.dataset.ex === ejercicio)));
+}
+
+function pintaModos() {
+  const hayFallos = fallidasDe(sit).length;
+  document.querySelectorAll(".modes .mode").forEach(b => {
+    b.setAttribute("aria-pressed", String(b.dataset.mode === modo));
+    if (b.dataset.mode === "fail") {
+      b.disabled = hayFallos === 0 && modo !== "fail";
+      b.textContent = hayFallos ? "Solo fallidas (" + hayFallos + ")" : "Solo fallidas";
+    }
+  });
+}
+
+function pintaPractica() {
+  pintaModos();
+  pintaExmode();
+  const f = actual();
+  const s = SITUACIONES.find(x => x.id === sit);
+  const n = mazo.length;
+
+  const panel = $("#view-practicar").querySelector(".panel");
+  const vacio = $("#practiceEmpty");
+
+  if (!f) {
+    panel.classList.add("hidden");
+    $("#legend").classList.add("hidden");
+    vacio.classList.remove("hidden");
+    vacio.innerHTML =
+      `<strong>No queda ninguna frase fallida aquí</strong>
+       Vuelve al mazo completo de ${esc(s.titulo)} para seguir repasando.
+       <div class="row" style="justify-content:center"><button class="btn primary" id="backAll">Practicar las ${s.frases.length} frases</button></div>`;
+    $("#backAll").addEventListener("click", () => { modo = "seq"; nuevoMazo(); render(); });
+    return;
+  }
+  panel.classList.remove("hidden");
+  $("#legend").classList.remove("hidden");
+  vacio.classList.add("hidden");
+
+  const aciertos = mazo.filter(id => stat(id).last === "ok").length;
+  $("#pos").textContent = "Frase " + (idx + 1) + " de " + n +
+    (modo === "fail" ? " · solo fallidas" : modo === "rnd" ? " · aleatorias" : "");
+  $("#bar").style.width = Math.round(((idx) / n) * 100) + "%";
+  $("#score").textContent = aciertos + " de " + n + " correctas";
+  $("#promptTag").textContent = s.titulo + (
+    ejercicio === "ordenar" ? " · ordena las palabras" :
+    ejercicio === "rellenar" ? " · completa las palabras que faltan" : " · traduce al francés");
+  $("#prompt").textContent = f.es;
+
+  const ta = $("#answer"), og = $("#orderGame"), gg = $("#gapGame");
+  if (ejercicio === "ordenar") {
+    ta.classList.add("hidden"); gg.classList.add("hidden"); og.classList.remove("hidden");
+    if (!corregida) { generarPuzzleSiNuevo(f); $("#verdict").innerHTML = ""; pintaOrden(false); }
+    else pintaOrden(true);
+  } else if (ejercicio === "rellenar") {
+    ta.classList.add("hidden"); og.classList.add("hidden"); gg.classList.remove("hidden");
+    if (!corregida) { generarGapSiNuevo(f); $("#verdict").innerHTML = ""; pintaGap(false); }
+    else pintaGap(true);
+  } else {
+    og.classList.add("hidden"); gg.classList.add("hidden"); ta.classList.remove("hidden");
+    if (!corregida) { ta.value = ""; ta.disabled = false; $("#verdict").innerHTML = ""; }
+  }
+  $("#checkBtn").textContent = corregida ? "Siguiente frase" : "Comprobar";
+  $("#revealBtn").disabled = corregida;
+}
+
+function corrige(revelada) {
+  const f = actual(); if (!f || corregida) return;
+  const txt = $("#answer").value;
+  const st = stat(f.id);
+  let clase, titulo, cuerpo = "";
+
+  if (revelada) {
+    clase = "rev"; titulo = "Respuesta mostrada";
+    st.ko++; st.last = "ko";
+  } else {
+    const r = comparar(txt, f.en);
+    cuerpo = '<p class="diff">' + r.ops.map(o => {
+      if (o.t === "ok") return '<span class="w-ok">' + esc(o.w) + '</span>';
+      if (o.t === "extra") return '<span class="w-extra">' + esc(o.w) + '</span>';
+      if (o.t === "miss") return '<span class="w-miss">' + esc(o.w) + '</span>';
+      return '<span class="w-typo" title="correcto: ' + esc(o.sol) + '">' + esc(o.w) + '</span>';
+    }).join(" ") + "</p>";
+    if (r.exacta) { clase = "ok"; titulo = "Correcta"; st.ok++; st.last = "ok"; }
+    else if (r.soloErratas) { clase = "rev"; titulo = "Bien, con alguna errata de escritura"; st.ok++; st.last = "ok"; }
+    else { clase = "ko"; titulo = "Revisa la frase"; st.ko++; st.last = "ko"; }
+  }
+  save();
+
+  $("#verdict").innerHTML =
+    '<div class="verdict ' + clase + '"><h3>' + titulo + "</h3>" + cuerpo +
+    '<div class="solution"><span class="lab">Frase correcta</span>' +
+    '<span class="en">' + esc(f.en) + "</span></div></div>";
+
+  corregida = true;
+  $("#answer").disabled = true;
+  $("#checkBtn").textContent = "Siguiente frase";
+  $("#revealBtn").disabled = true;
+  decir(f.en);
+  actualizaPill();
+  $("#checkBtn").focus();
+}
+
+function siguiente() {
+  corregida = false;
+  if (idx < mazo.length - 1) { idx++; }
+  else { idx = 0; }
+  pintaPractica();
+  $("#answer").disabled = false;
+  $("#answer").focus();
+}
+
+/* ---- vista Fichero ---- */
+function pintaFichero() {
+  const s = SITUACIONES.find(x => x.id === sit);
+  const lista = frasesDe(sit).map(f => {
+    const st = stat(f.id);
+    const marca = st.last === "ok" ? "Superada" : st.last === "ko" ? "Pendiente" : "Sin practicar";
+    return `<li data-sit="${f.sit}">
+      <div class="card-body">
+        <div class="card-en">${esc(f.en)}</div>
+        <div class="card-es">${esc(f.es)}</div>
+        <div class="card-meta"><span>${marca}</span>
+          <span class="tally-ok">${st.ok} ✓</span><span class="tally-ko">${st.ko} ✗</span></div>
+      </div>
+      <button class="speak" data-en="${esc(f.en)}" title="Escuchar" aria-label="Escuchar">🔊</button>
+    </li>`;
+  }).join("");
+
+  $("#ficheroList").innerHTML =
+    `<div class="sec-head"><h2>${s.titulo}: ${esc(s.tema)}</h2><span class="c">${s.frases.length} frases</span></div>
+     <ul class="cards">${lista}</ul>`;
+  enlazaVoz($("#ficheroList"));
+}
+
+/* ---- vista Fallidas ---- */
+function pintaFallidas() {
+  const s = SITUACIONES.find(x => x.id === sit);
+  const fails = fallidasDe(sit);
+
+  $("#failToolbar").innerHTML = fails.length
+    ? `<button class="btn primary" id="drillBtn">Practicar estas ${fails.length}</button>
+       <button class="btn" id="clearBtn">Vaciar la lista</button>`
+    : "";
+
+  if (!fails.length) {
+    $("#fallidasList").innerHTML =
+      `<div class="empty"><strong>Nada pendiente en ${esc(s.titulo)}</strong>
+       Aquí aparecerán las frases que falles o cuya respuesta muestres, hasta que las aciertes.</div>`;
+    return;
+  }
+
+  $("#fallidasList").innerHTML =
+    `<div class="sec-head"><h2>${s.titulo}: ${esc(s.tema)}</h2><span class="c">${fails.length} por repasar</span></div>
+     <ul class="cards">` + fails.map(f => {
+      const st = stat(f.id);
+      return `<li data-sit="${f.sit}">
+        <div class="card-body">
+          <div class="card-es">${esc(f.es)}</div>
+          <div class="card-en">${esc(f.en)}</div>
+          <div class="card-meta"><span class="tally-ko">${st.ko} fallos</span>
+            <span class="tally-ok">${st.ok} aciertos</span>
+            <button class="btn ghost" data-done="${f.id}" style="padding:0;font-size:.74rem">Marcar como superada</button></div>
+        </div>
+        <button class="speak" data-en="${esc(f.en)}" title="Escuchar" aria-label="Escuchar">🔊</button>
+      </li>`;
+    }).join("") + "</ul>";
+
+  enlazaVoz($("#fallidasList"));
+  $("#fallidasList").querySelectorAll("[data-done]").forEach(b => {
+    b.addEventListener("click", () => {
+      stat(b.dataset.done).last = "ok"; save(); render();
+    });
+  });
+  const d = $("#drillBtn");
+  if (d) d.addEventListener("click", () => {
+    modo = "fail"; nuevoMazo(); tab = "practicar"; render(); $("#answer").focus();
+  });
+  const c = $("#clearBtn");
+  if (c) c.addEventListener("click", () => {
+    fails.forEach(f => { stat(f.id).last = "ok"; }); save(); render();
+  });
+}
+
+function enlazaVoz(root) {
+  root.querySelectorAll(".speak").forEach(b => b.addEventListener("click", () => decir(b.dataset.en)));
+}
+
+/* ---- render general ---- */
+function actualizaPill() {
+  const n = totalFallidas();
+  const p = $("#failPill");
+  p.textContent = n;
+  p.classList.toggle("hidden", n === 0);
+}
+function render() {
+  document.querySelectorAll('nav.tabs button').forEach(b =>
+    b.setAttribute("aria-selected", String(b.dataset.tab === tab)));
+  $("#view-practicar").classList.toggle("hidden", tab !== "practicar");
+  $("#view-fichero").classList.toggle("hidden", tab !== "fichero");
+  $("#view-fallidas").classList.toggle("hidden", tab !== "fallidas");
+  pintaSitbar();
+  actualizaPill();
+  if (tab === "practicar") pintaPractica();
+  if (tab === "fichero") pintaFichero();
+  if (tab === "fallidas") pintaFallidas();
+}
+
+/* ============ 6. EVENTOS ============ */
+document.querySelectorAll("nav.tabs button").forEach(b =>
+  b.addEventListener("click", () => { tab = b.dataset.tab; render(); }));
+
+$("#checkBtn").addEventListener("click", () => {
+  if (corregida) { siguiente(); return; }
+  if (ejercicio === "ordenar") corrigeOrden(false);
+  else if (ejercicio === "rellenar") corrigeGap(false);
+  else corrige(false);
+});
+$("#revealBtn").addEventListener("click", () => {
+  if (ejercicio === "ordenar") corrigeOrden(true);
+  else if (ejercicio === "rellenar") corrigeGap(true);
+  else corrige(true);
+});
+document.querySelectorAll("#exmode .ex").forEach(b => b.addEventListener("click", () => {
+  if (b.dataset.ex === ejercicio) return;
+  ejercicio = b.dataset.ex;
+  ordenFraseId = null;
+  gapFraseId = null;
+  corregida = false;
+  $("#verdict").innerHTML = "";
+  pintaPractica();
+}));
+$("#hearBtn").addEventListener("click", () => { const f = actual(); if (f) decir(f.en); });
+document.querySelectorAll(".modes .mode").forEach(b => b.addEventListener("click", () => {
+  modo = b.dataset.mode;
+  nuevoMazo();
+  pintaPractica();
+  const ta = $("#answer");
+  if (ta && !ta.disabled) ta.focus();
+}));
+$("#resetBtn").addEventListener("click", () => {
+  if (confirm("Se borran aciertos, fallos y la lista de fallidas de las tres situaciones. ¿Continuar?")) {
+    store.stats = {}; save(); render();
+  }
+});
+$("#answer").addEventListener("keydown", e => {
+  if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); corrige(false); }
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "Enter" && corregida && tab === "practicar" && document.activeElement !== $("#answer")) {
+    e.preventDefault(); siguiente();
+  }
+});
+
+const themeBtn = $("#themeBtn");
+function aplicaTema(t) {
+  document.documentElement.setAttribute("data-theme", t);
+  store.tema = t; save();
+}
+themeBtn.addEventListener("click", () => {
+  const actualT = document.documentElement.getAttribute("data-theme");
+  aplicaTema(actualT === "dark" ? "light" : "dark");
+});
+if (store.tema) document.documentElement.setAttribute("data-theme", store.tema);
+else document.documentElement.removeAttribute("data-theme");
+
+/* ============ 7. ARRANQUE ============ */
+nuevoMazo();
+render();
+</script>
+</body>
+</html>
